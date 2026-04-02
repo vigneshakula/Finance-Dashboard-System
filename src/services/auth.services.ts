@@ -3,14 +3,15 @@ import jwt from 'jsonwebtoken';
 import  User  from '../models/user';
 
 const JWT_SECRET = process.env.JWT_SECRET as string;
-const SALT_ROUNDS = 10;
+const SALT_ROUNDS = Number(process.env.BCRYPT_SALT_ROUNDS) || 10;
 
 export const signup = async (data: {
     name: string;
     email: string;
     password: string;
+    role?:string
     }) => {
-    const { name, email, password } = data;
+    const { name, email, password,role } = data;
     
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -24,7 +25,7 @@ export const signup = async (data: {
         name,
         email,
         password: hashedPassword,
-        role: 'viewer'
+        role: role||"viewer"
         });
 
     
