@@ -4,5 +4,6 @@ export interface RecordInterface {
   category: string;
   date: Date;
   notes?: string;
+  userId:string;
 }
 

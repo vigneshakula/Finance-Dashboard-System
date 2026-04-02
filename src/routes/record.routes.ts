@@ -1,25 +1,44 @@
-import { Router } from "express";
+import express from 'express';
+import * as recordController from '../controllers/record.controllers';
+import { authenticate } from '../middlewares/auth.middleware';
+import { checkAdmin, checkAnalyst } from '../middlewares/role.middleware';
+import { validate } from '../middlewares/validate.middleware';
+import { createRecordSchema, updateRecordSchema } from '../validations/record.validations';
 
-const router = Router();
+const router = express.Router();
 
-router.get("/records", ()=>{
 
-});
+router.post(
+  '/',
+  authenticate,
+  checkAdmin,
+  validate(createRecordSchema),
+  recordController.createRecord
+);
 
-router.get("/records/:id", ()=>{
 
-});
+router.get(
+  '/',
+  authenticate,
+  checkAnalyst,
+  recordController.getRecords
+);
 
-router.post("/records", ()=>{
 
-});
+router.put(
+  '/:id',
+  authenticate,
+  checkAdmin,
+  validate(updateRecordSchema),
+  recordController.updateRecord
+);
 
-router.put("/records/:id", ()=>{
 
-});
-
-router.delete("/records/:id", ()=>{
-
-});
+router.delete(
+  '/:id',
+  authenticate,
+  checkAdmin,
+  recordController.deleteRecord
+);
 
 export default router;

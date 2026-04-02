@@ -6,6 +6,7 @@ const recordSchema = new Schema<RecordInterface>({
   category: String,
   date: Date,
   notes: String,
+  userId:String,
 }, { timestamps: true });
 
 const recordModel = model("record",recordSchema);
