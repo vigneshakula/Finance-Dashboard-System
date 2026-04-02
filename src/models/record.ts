@@ -1,5 +1,5 @@
 import { RecordInterface } from "../types/record";
-import { Model, Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 const recordSchema = new Schema<RecordInterface>({
   amount: { type: Number, required: true },
   type: { type: String, enum: ['income', 'expense'] },
@@ -8,6 +8,6 @@ const recordSchema = new Schema<RecordInterface>({
   notes: String,
 }, { timestamps: true });
 
-const recordModel = new Model("record",recordSchema);
+const recordModel = model("record",recordSchema);
 
 export default recordModel;

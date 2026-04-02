@@ -1,4 +1,4 @@
-import { Schema,Model } from "mongoose";
+import { Schema,model } from "mongoose";
 import { User } from "../types/user";
 import { RecordInterface } from "../types/record";
 const userSchema = new Schema<User>({
@@ -9,6 +9,6 @@ const userSchema = new Schema<User>({
   isActive: { type: Boolean, default: true }
 }, { timestamps: true });
 
-const userModal = new Model("user",userSchema);
+const userModal = model("user",userSchema);
 
 export default userModal;
