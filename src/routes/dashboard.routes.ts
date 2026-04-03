@@ -1,21 +1,9 @@
-import { Router } from "express";
+import express from 'express';
+import { getSummary } from '../controllers/dashboard.controllers';
+import { authenticate } from '../middlewares/auth.middleware';
 
-const router = Router();
+const router = express.Router();
 
-router.get("/dashboard/summary",()=>{
-
-});
-
-router.get("/dashboard/recent",()=>{
-
-});
-
-router.get("/dashboard/categories",()=>{
-
-});
-
-router.get("/dashboard/trends",()=>{
-
-});
+router.get('/summary', authenticate, getSummary);
 
 export default router;
