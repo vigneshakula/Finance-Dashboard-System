@@ -72,6 +72,6 @@ export const deleteRecord = async (req: Request, res: Response) => {
 
     res.status(200).json({ message: 'Record deleted Successfully' });
   } catch (err: any) {
-    res.status(404).json({ message: err.message });
+    res.status(404).json({ message: "Record not found" });
   }
 };

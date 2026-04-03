@@ -16,17 +16,19 @@ export const updateRecord = async (
   id: string,
   data: any,
 ) => {
-    const record = await Record.findOneAndReplace(
-        { _id: id },
-        data,
-        { returnDocument: "after" }
-    );
+    try{
 
-    if (!record) {
-        throw new Error('Record not found');
+        const record = await Record.findOneAndUpdate(
+            { _id: id },
+            data,
+            { returnDocument: "after" }
+        );
+        return record;
+    }
+    catch{
+            throw new Error('Record not found');
     }
 
-    return record;
 };
 
 export const deleteRecord = async (id: string) => {
