@@ -44,16 +44,26 @@ password: htg@12345
 
 ## 📂 Project Structure
 src/
-├── config/
-├── controllers/
-├── middlewares/
-├── models/
-├── routes/
-├── services/
-├── types/
-├── validations/
-├── app.ts
-└── server.ts
+
+  ├── config/
+
+  ├── controllers/
+
+  ├── middlewares/
+
+  ├── models/
+
+  ├── routes/
+
+  ├── services/
+
+  ├── types/
+
+  ├── validations/
+
+  ├── app.ts
+
+  └── server.ts
 
 ---
 
@@ -61,6 +71,7 @@ src/
 
 ### 1. Clone the repository
   git clone https://github.com/vigneshakula/Finance-Dashboard-System.git
+  
   cd finance-dashboard-system
   
 ---
@@ -73,8 +84,11 @@ src/
 ### 3. Setup environment variables
 
   Create a `.env` file:
+  
   PORT=5000
+  
   MONGO_URI=your_mongodb_connection_string
+  
   JWT_SECRET=your_secret_key
 
   
@@ -154,15 +168,6 @@ Use JWT token in headers:Authorization: Bearer <your_token>
 
 ---
 
-
----
-
 ## 👤 Author
 
 **Vignesh Akula**
-
-
-
-
-## 📂 Projec
-  npm run buildt Structure
