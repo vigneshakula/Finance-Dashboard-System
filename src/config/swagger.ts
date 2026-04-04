@@ -8,7 +8,7 @@ const options = {
       version: '1.0.0'
     },
     servers: [
-      { url: 'http://localhost:5000' }
+      { url: 'https://api-finance-dashboard-system.onrender.com' }
     ],
     components: {
     securitySchemes: {
