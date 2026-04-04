@@ -3,15 +3,6 @@
 A secure and scalable backend API for a **Finance Dashboard System** built using **Node.js, Express, TypeScript, and MongoDB**.  
 This project demonstrates authentication, role-based access control, and financial data aggregation.
 
-## 🌐 Live Demo
-
-Backend API is live at:
-
-https://your-app.onrender.com
-
-Swagger Documentation:
-
-https://your-app.onrender.com/api-docs
 
 ---
 ## 🌐 Live Demo
