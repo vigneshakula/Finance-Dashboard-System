@@ -1,4 +1,4 @@
-# 💰 Finance Dashboard System (Backend)
+# 💰 FinTrack API Finance Dashboard System (Backend)
 
 A secure and scalable backend API for a **Finance Dashboard System** built using **Node.js, Express, TypeScript, and MongoDB**.  
 This project demonstrates authentication, role-based access control, and financial data aggregation.
